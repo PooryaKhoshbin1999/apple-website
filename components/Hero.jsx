@@ -21,7 +21,7 @@ export default function Hero() {
 
   // states
 
-  const [videoSrc, setVideoSrc] = useState();
+  const [videoSrc, setVideoSrc] = useState('');
 
   const handleVideoSrcSet = () => {
     if (window.innerWidth < 760) {
