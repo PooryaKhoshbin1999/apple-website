@@ -19,13 +19,17 @@ export default function Hero() {
     });
   }, []);
 
+  const firstVideo = () => {
+    if (window.innerWidth < 760) {
+      return '/assets/videos/smallHero.mp4';
+    }
+
+    return '/assets/videos/hero.mp4';
+  };
+
   // states
 
-  const [videoSrc, setVideoSrc] = useState(
-    window.innerWidth < 760
-      ? '/assets/videos/smallHero.mp4'
-      : '/assets/videos/hero.mp4'
-  );
+  const [videoSrc, setVideoSrc] = useState(firstVideo);
 
   const handleVideoSrcSet = () => {
     if (window.innerWidth < 760) {
